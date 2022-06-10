@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <!-- Section 1 -->
+    <section class="section-1">
+        <form action="#" class="search-form">
+            <label for="city-search"></label>
+            <input id="city-search" type="text" name="search city" placeholder="Zurich, Switzerland"
+                class="city-search-field">
+            <button type="submit" class="search-btn">
+                <ion-icon name="search" class="search-icon"></ion-icon>
+            </button>
+        </form>
+    </section>
+    <!-- Section 2 -->
+    <!-- Source code for switch from: https: //www.w3schools.com/howto/howto_css_switch.asp -->
+    <section class="section-2">
+        <div class="section-2-date-div">
+            <p><span class="localDate">Monday, 24 May</span></p>
+            <p><span class="localTime">4:55 PM</span></p>
+        </div>
+        <div class="section-2-switch-div">
+            <p class="celcius-farenheit">°C</p>
+            <label class="switch">
+                <input type="checkbox" class="switchFC">
+                <span class="slider round"></span>
+            </label>
+            <p class="celcius-farenheit">°F</p>
+        </div>
+
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section-3">
+        <div class="section-3-div-left">
+            <h2 name="temperature now" class="temperature-now">20°C</h2>
+            <h3 name="weather now">Cloudy</h3>
+            <p class="font-colour-grey">max: <span>24°C</span> min: <span>19°C</span></p>
+        </div>
+        <div class="section-3-div-right">
+            <ion-icon name="cloudy-outline" class="icon-weather-now"></ion-icon>
+            <div>
+                <p class="font-colour-grey">humidity: <span>61%</span></p>
+            </div>
+            <div>
+                <p class="font-colour-grey">feels like: <span>24°C</span></p>
+            </div>
+            <div>
+                <p class="font-colour-grey">wind: <span>5.66k/m</span></p>
+            </div>
+        </div>
+    </section>
+    <!-- Section 4 -->
+    <section class="section-forecast">
+        <h2 class="subheading-h2 font-colour-grey">Hourly Forecast</h2>
+        <div class="forecast-container">
+            <div class="forecast-div">
+                <p>Now</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+            <div class="forecast-div">
+                <p>6pm</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+            <div class="forecast-div">
+                <p>7pm</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section-forecast">
+        <h2 class="subheading-h2 font-colour-grey">Daily Forecast</h2>
+        <div class="forecast-container">
+            <div class="forecast-div">
+                <p>Today</p>
+                <p class="forecast-date font-colour-grey">08 Jun</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+            <div class="forecast-div">
+                <p>Mon</p>
+                <p class="forecast-date font-colour-grey">09 Jun</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+            <div class="forecast-div">
+                <p>Mon</p>
+                <p class="forecast-date font-colour-grey">10 Jun</p>
+                <ion-icon name="cloudy-outline"></ion-icon>
+                <p class="font-colour-grey">24°C</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>2022</p>
+        <p>by</p>
+        <a href="https://github.com/bgtti/">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- <script src="secrets.js" type="module"></script> -->
+    <!-- <script src="weatherIcons.js" type="module"></script>
+    <script src="dateAndTime.js" type="module"></script>
+    <script src="weatherObject.js" type="module"></script>
+    <script src="app.js" type="module"></script> -->
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

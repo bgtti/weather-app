@@ -1,0 +1,290 @@
+:root{
+    --colorWhite: #fbfeff;
+    --colorWhitish: #d3d6d5;
+    --colorGrey: #7e848e;
+    --colorDarkGrey:#4e5155;
+    --colorDarkBlue: #11141b;
+    --colorMarineBlue:#181e2e;
+    --fontFamily: 'Open Sans', sans-serif;
+    --fontSizeInputField: 30px;
+    --borderRadius: 20px;
+    --marginBottomSmall: 10px;
+    --marginBottomBig: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontFamily);
+    color: var(--colorWhitish);
+}
+html{
+    height: 100%;
+    display: flex;
+}
+html,body{
+    background-color: var(--colorDarkBlue);
+}
+body{
+    flex-grow: 2;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1 {
+    margin: 0 auto;
+    margin-bottom: var(--marginBottomSmall);
+    /* font-weight: normal; */
+    color: var(--colorGrey);
+    color: var(--colorDarkGrey);
+    /* background-color: aqua; */
+    
+}
+.font-colour-grey{
+    color: var(--colorGrey);
+}
+.font-colour-grey > span {
+    color: var(--colorGrey);
+}
+.subheading-h2{
+    font-weight: normal;
+}
+/* ****** SECTION 1  ****** */
+.section-1{
+margin-bottom: var(--marginBottomSmall);
+/* background-color: rebeccapurple; */
+}
+.search-form {
+    display: flex;
+    align-items:flex-end;
+}
+.city-search-field{
+    background-color: var(--colorDarkBlue);
+    border: none;
+    height: 50px;
+    width: 320px;
+    color: var(--colorWhite);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeInputField);
+    border-bottom: 2px solid var(--colorMarineBlue);
+}
+@media only screen and (max-width: 600px) {
+    .city-search-field {
+        flex-grow: 2;
+    }
+}
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--colorWhite);
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--colorWhite);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--colorWhite);
+}
+
+.search-btn{
+    border: 2px solid var(--colorMarineBlue);
+    height: 50px;
+    background-color: var(--colorDarkBlue);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.search-btn:hover{
+    background-color: var(--colorMarineBlue);
+}
+.search-icon{
+    font-size: 30px;
+    padding: 5px;
+}
+
+/* ****** SECTION 2  ****** */
+/* .section-2{
+    background-color: pink;
+} */
+.section-2-date-div{
+    margin-bottom: var(--marginBottomSmall);
+}
+.section-2-date-div > p > span{
+    color: var(--colorGrey);
+}
+.section-2-switch-div{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.celcius-farenheit{
+    font-size: 25px;
+    color: var(--colorGrey);
+}
+/* Source code for switch adapted from: https: //www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--colorDarkGrey);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: var(--colorDarkBlue);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--colorGrey);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--colorGrey);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* ****** SECTION 3  ****** */
+.section-3{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: var(--marginBottomBig);
+    flex-grow: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-3 {
+            justify-content: space-between;
+        }
+}
+@media only screen and (min-width: 601px) {
+    .section-3 {
+        gap: 270px;
+    }
+}
+/* .section-2-div-left {
+    background-color: red;
+} */
+.temperature-now{
+    font-size: 75px;
+    font-weight: normal;
+}
+h3{
+    font-weight: normal;
+    font-size: 25px;
+}
+.section-3-div-right{
+
+    padding-left: 25px ;
+}
+.icon-weather-now{
+    font-size: 75px;
+}
+
+/* ****** SECTION 4 + 5 ****** */
+.section-forecast {
+    background-color: var(--colorMarineBlue);
+    border-radius: var(--borderRadius);
+    padding: 10px;
+    margin-bottom: var(--marginBottomBig);
+}
+.section-forecast > h2{
+    margin-bottom: var(--marginBottomSmall);
+    font-size: 20px;
+}
+.forecast-container{
+    display: flex;
+    gap: 5px;
+    /* background-color: pink; */
+}
+.forecast-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 50px;
+    
+}
+.forecast-div > ion-icon{
+color: var(--colorWhite);
+font-size: 23px;
+}
+.forecast-date{
+    font-size:12px;
+}
+
+/* ****** FOOTER ****** */
+/* Footer */
+footer {
+    /* background-color: purple; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px 0px 10px 0px;
+    min-height: 30px;
+}
+
+footer p {
+    margin-right: 7px;
+    color: var(--colorGrey);
+}
+footer a {
+    display: flex;
+    align-items: flex-end;
+}
+
+footer ion-icon {
+    font-size: 20px;
+    padding-left: 5px;
+    color: var(--colorGrey);
+    
+}
+
+footer ion-icon:hover {
+    transform: scale(2) rotateZ(360deg);
+}
