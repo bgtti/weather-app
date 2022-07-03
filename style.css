@@ -31,14 +31,22 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+/* @media only screen and (min-width: 601px) {
+    body {
+        align-items: flex-start;
+    }
+} */
 h1 {
     margin: 0 auto;
     margin-bottom: var(--marginBottomSmall);
-    /* font-weight: normal; */
     color: var(--colorGrey);
     color: var(--colorDarkGrey);
-    /* background-color: aqua; */
-    
+}
+@media only screen and (min-width: 601px) {
+    h1 {
+        margin: 0;
+        font-size: 40px;
+    }
 }
 .font-colour-grey{
     color: var(--colorGrey);
@@ -49,10 +57,10 @@ h1 {
 .subheading-h2{
     font-weight: normal;
 }
+
 /* ****** SECTION 1  ****** */
 .section-1{
 margin-bottom: var(--marginBottomSmall);
-/* background-color: rebeccapurple; */
 }
 .search-form {
     display: flex;
@@ -73,18 +81,21 @@ margin-bottom: var(--marginBottomSmall);
         flex-grow: 2;
     }
 }
+@media only screen and (min-width: 601px) {
+    .city-search-field {
+        width: 600px;
+    }
+}
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--colorWhite);
     opacity: 1;
     /* Firefox */
 }
-
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
     color: var(--colorWhite);
 }
-
 ::-ms-input-placeholder {
     /* Microsoft Edge */
     color: var(--colorWhite);
@@ -121,6 +132,11 @@ margin-bottom: var(--marginBottomSmall);
     gap: 5px;
     align-items: center;
     justify-content: center;
+}
+@media only screen and (min-width: 601px) {
+    .section-2-switch-div {
+        justify-content:flex-start;
+    }
 }
 .celcius-farenheit{
     font-size: 25px;
@@ -233,14 +249,20 @@ h3{
     padding: 10px;
     margin-bottom: var(--marginBottomBig);
 }
+@media only screen and (min-width: 601px) {
+    .section-forecast {
+        max-width: 570px;
+    }
+}
 .section-forecast > h2{
     margin-bottom: var(--marginBottomSmall);
     font-size: 20px;
 }
 .forecast-container{
     display: flex;
-    gap: 5px;
-    /* background-color: pink; */
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 .forecast-div{
     display: flex;
@@ -256,6 +278,33 @@ font-size: 23px;
 }
 .forecast-date{
     font-size:12px;
+}
+
+/* ****** LOADER ****** */
+/* Loader */
+.loader-container{
+    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.loader-message{
+    display: flex;
+    align-items: center;
+        justify-content: center;
+        flex-direction: column;
+}
+
+/* ****** HIDING ELEMENTS ****** */
+/* adding class of hide */
+.hide {
+    display: none;
 }
 
 /* ****** FOOTER ****** */
