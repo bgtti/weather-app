@@ -2,7 +2,7 @@ The Weather App was developed as a part of the Odin Project.
 
 Live preview: https://bgtti.github.io/weather-app/
 
-![Preview of app](/weatherAppPreview.png | height=100)
+![Preview of app](/weatherAppPreview.png|height=100)
 
 How the Weather App works
 
