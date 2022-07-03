@@ -11,12 +11,12 @@
 //The fetchWeatherIcon method takes in the weather id as a parameter, checks the group it belongs to, and spits out the name of the ion-icon.
 //This name can be used as the attribute on the <ion-icon></ion-icon> html element to display the corresponding icon. (For more info on usage refer to: https://ionic.io)
 
-const weatherIcons = {
+export const weatherIcons = {
     sunny: ["sunny-outline", ["800", "801"], ["905"]],
     partiallyCloudy: ["partly-sunny-outline", ["801", "803"]],
     cloudy: ["cloudy-outline", ["803", "805"]],
     rainy: ["rainy-outline", ["300", "600"]],
-    snowy: ["snow- outline", ["600", "700"], ["903"]],
+    snowy: ["snow-outline", ["600", "700"], ["903"]],
     thunderstorm: ["thunderstorm-outline", ["200", "300"], ["771"], ["960"]],
     hurricane: ["warning-outline", ["900", "903"], ["781"], ["962"]],
     foggy: ["cloud-circle-outline", ["700", "770"]],
@@ -67,6 +67,5 @@ const weatherIcons = {
         return weatherIcon
     }
 }
-
-weatherIcons.fetchWeatherIcon("115")
+//Example: weatherIcons.fetchWeatherIcon("115")
 
