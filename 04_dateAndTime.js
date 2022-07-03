@@ -40,12 +40,12 @@ let whatev = new Date().getTime();;
 let mimi = "1654881043291";
 let mi2 = parseInt(mimi);
 
-console.log("test " + timeFormat(date))
-console.log("test " + timeFormat(whatev))
-console.log("test " + timeFormat(mimi))
-console.log("test " + timeFormat(mi2))
-console.log("test " + timeFormat())
-console.log("test " + timeFormat("hello"))
+// console.log("test " + timeFormat(date))
+// console.log("test " + timeFormat(whatev))
+// console.log("test " + timeFormat(mimi))
+// console.log("test " + timeFormat(mi2))
+// console.log("test " + timeFormat())
+// console.log("test " + timeFormat("hello"))
 
 
 //resources
