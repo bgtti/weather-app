@@ -107,22 +107,23 @@ const settingLocation = (function () {
     getBrowserLocation()
 })()
 
-//Forward Geocoding: converts free-text address or place to location data. Uses Forward Geocoding API from https://positionstack.com
+//Forward Geocoding: converts free-text address or place to location data. Uses Direct Geocoding API from https://openweathermap.org/api/geocoding-api
 //Searching for location using the search input field
 const searchAddress = (function () {
     const getCoords = async function (theQuery) {
         let myQuery = theQuery;
-        let urlPositionStack = `http://api.positionstack.com/v1/forward?access_key=${apiKey.API_KEY_POSITION_STACK}&query=${myQuery}&bbox_module=1&output=json`;
+        let urlOpenWeatherGeocoding = `http://api.openweathermap.org/geo/1.0/direct?q=${myQuery}&limit=1&appid=${apiKey.API_KEY_OPEN_WEATHER}`
         try {
-            const response = await fetch(urlPositionStack, { mode: 'cors' });
+            const response = await fetch(urlOpenWeatherGeocoding, { mode: 'cors' });
             const data = await response.json();
             console.log("Coordinates data fetch successfull.")
             console.log(data);
-            locationAndWeatherObject.longitude = data.data[0].longitude;
-            locationAndWeatherObject.latitude = data.data[0].latitude;
-            locationAndWeatherObject.city = data.data[0].name;
-            locationAndWeatherObject.country = data.data[0].country;
+            locationAndWeatherObject.longitude = data[0].lon;
+            locationAndWeatherObject.latitude = data[0].lat;
+            locationAndWeatherObject.city = data[0].name;
+            locationAndWeatherObject.country = data[0].country;
             getWeatherData.getWeather();
+            populatingTheHTML.populatingCityInputField(locationAndWeatherObject.city, locationAndWeatherObject.country)
         } catch (error) {
             console.warn(`ERROR(${error.code}) in retrieving forward geocoding data: ${error.message}`);
         }
