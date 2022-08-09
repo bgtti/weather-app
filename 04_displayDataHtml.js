@@ -85,8 +85,14 @@ const populatingTheHTML = (function () {
         }
     }
 
+    const populatingCityInputField = function (city, country) {
+        const theField = document.querySelector(".searchBox");
+        theField.value = `${city}, ${country}`
+    }
+
     return {
-        dataToHtml
+        dataToHtml,
+        populatingCityInputField
     }
 
 })()

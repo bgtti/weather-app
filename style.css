@@ -29,13 +29,7 @@ body{
     margin: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-/* @media only screen and (min-width: 601px) {
-    body {
-        align-items: flex-start;
-    }
-} */
 h1 {
     margin: 0 auto;
     margin-bottom: var(--marginBottomSmall);
@@ -118,9 +112,6 @@ margin-bottom: var(--marginBottomSmall);
 }
 
 /* ****** SECTION 2  ****** */
-/* .section-2{
-    background-color: pink;
-} */
 .section-2-date-div{
     margin-bottom: var(--marginBottomSmall);
 }
@@ -223,9 +214,6 @@ input:checked+.slider:before {
         gap: 270px;
     }
 }
-/* .section-2-div-left {
-    background-color: red;
-} */
 .temperature-now{
     font-size: 75px;
     font-weight: normal;
@@ -310,7 +298,6 @@ font-size: 23px;
 /* ****** FOOTER ****** */
 /* Footer */
 footer {
-    /* background-color: purple; */
     display: flex;
     align-items: flex-end;
     justify-content: center;
